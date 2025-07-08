@@ -111,11 +111,12 @@ try:
     def load_data(file_path):
         return pd.read_csv(file_path)
 
-    neet = load_data("neet_data_34prov.csv")
-    model = load_data("model_params_region.csv")
+    # *** PERUBAHAN DI SINI ***
+    neet = load_data("data/neet_data_34prov.csv")
+    model = load_data("data/model_params_region.csv")
 
 except FileNotFoundError:
-    st.error("Error: File 'neet_data_34prov.csv' dan 'model_params_region.csv' tidak ditemukan. Pastikan file ada di direktori yang sama.")
+    st.error("Error: File 'neet_data_34prov.csv' dan 'model_params_region.csv' tidak ditemukan. Pastikan file ada di folder 'data/' di direktori yang sama dengan aplikasi Anda.")
     st.stop()
 
 # --- Normalisasi Kolom Provinsi di NEET DataFrame ---
@@ -238,9 +239,10 @@ try:
         with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
 
-    geojson = load_geojson("gadm41_IDN_1.json")
+    # *** PERUBAHAN DI SINI ***
+    geojson = load_geojson("data/gadm41_IDN_1.json")
 except FileNotFoundError:
-    st.error("Error: File 'gadm41_IDN_1.json' tidak ditemukan. Pastikan file ada di direktori yang sama.")
+    st.error("Error: File 'gadm41_IDN_1.json' tidak ditemukan. Pastikan file ada di folder 'data/' di direktori yang sama dengan aplikasi Anda.")
     st.stop()
 
 # Normalisasi nama provinsi di GeoJSON agar cocok dengan data Anda
@@ -367,7 +369,7 @@ else:
             else:
                 param_region = model_region.iloc[0]
 
-                # Variabel yang secara AKTUAL ada dalam model untuk region ini (koefisiennya bukan NaN)
+                # Variabel yang secara AKTUAL ada dalam model (koefisiennya bukan NaN)
                 model_actual_vars = []
                 for var in all_potential_vars:
                     if pd.notna(param_region.get(var)): # Hanya masukkan jika koefisiennya ada (bukan NaN)
