@@ -5,7 +5,6 @@
 ![Python](https://img.shields.io/badge/python-3.10+-blue)
 
 > **NEETify** adalah dashboard interaktif berbasis data yang dirancang untuk menganalisis dan mensimulasikan faktor-faktor yang memengaruhi NEET (Not in Education, Employment, or Training) pada pemuda usia 15–24 tahun di Indonesia.  
-> Proyek ini disusun sebagai kontribusi untuk **Essay Insight Competition – INTELECTRA 2025**, Himpro Pasca Statistika IPB University.
 
 ---
 
@@ -22,7 +21,6 @@ Melalui pemodelan regresi **Generalized Least Squares (GLS)** dan visualisasi in
 ✅ **Peta Interaktif** — Menampilkan distribusi NEET antarprovinsi dari tahun 2016–2024  
 ✅ **Tren Time Series** — Lihat grafik tren NEET per provinsi  
 ✅ **Simulasi Prediksi NEET** — Uji skenario kebijakan berdasarkan model GLS tiap wilayah  
-✅ **Responsif & Ringan** — Dibangun menggunakan Streamlit, dapat diakses via web & mobile
 
 ---
 
